@@ -1,4 +1,229 @@
 -------------------------------------------------------------------------------
 Test set: ConduitApp.ConduitTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.947 s - in ConduitApp.ConduitTest
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 5.993 s <<< FAILURE! - in ConduitApp.ConduitTest
+testAll[1][1]  Time elapsed: 1.57 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+>> classpath:ConduitApp/feature/Articles.feature:7
+>> karate-config.js failed
+>> js failed:
+>>>>
+01: function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'dev';
+06:   }
+07:   var config = {
+08:     apiUrl: 'http://localhost:3000/api/'
+09:   }
+10:   if (env == 'dev') {
+11:     config.userEmail = 'test@test.coma'
+12:     config.userPassword = 'test' 
+13:   }
+14:   if (env == 'e2e') {
+15:     // customize
+16:   }
+17: 
+18:   var accessToken = karate.callSingle('classpath:helpers/CreateToken.feature', config).authToken
+19:   karate.configure('headers', { Authorization: 'Token ' + accessToken })
+20: 
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 422, expected: 200, response time in milliseconds: 34, url: http://localhost:3000/api/users/login, response: 
+{"errors":{"email or password":"is invalid"}}
+classpath:helpers/CreateToken.feature:8
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- <js>.fn(Unnamed:18)
+
+js failed:
+>>>>
+01: function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'dev';
+06:   }
+07:   var config = {
+08:     apiUrl: 'http://localhost:3000/api/'
+09:   }
+10:   if (env == 'dev') {
+11:     config.userEmail = 'test@test.coma'
+12:     config.userPassword = 'test' 
+13:   }
+14:   if (env == 'e2e') {
+15:     // customize
+16:   }
+17: 
+18:   var accessToken = karate.callSingle('classpath:helpers/CreateToken.feature', config).authToken
+19:   karate.configure('headers', { Authorization: 'Token ' + accessToken })
+20: 
+21:   return config;
+22: }
+<<<<
+com.intuit.karate.KarateException: js failed:
+>>>>
+01: function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'dev';
+06:   }
+07:   var config = {
+08:     apiUrl: 'http://localhost:3000/api/'
+09:   }
+10:   if (env == 'dev') {
+11:     config.userEmail = 'test@test.coma'
+12:     config.userPassword = 'test' 
+13:   }
+14:   if (env == 'e2e') {
+15:     // customize
+16:   }
+17: 
+18:   var accessToken = karate.callSingle('classpath:helpers/CreateToken.feature', config).authToken
+19:   karate.configure('headers', { Authorization: 'Token ' + accessToken })
+20: 
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 422, expected: 200, response time in milliseconds: 34, url: http://localhost:3000/api/users/login, response: 
+{"errors":{"email or password":"is invalid"}}
+classpath:helpers/CreateToken.feature:8
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- <js>.fn(Unnamed:18)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:ConduitApp/feature/Articles.feature:5
+classpath:ConduitApp/feature/Articles.feature:8
+classpath:ConduitApp/feature/Articles.feature:9
+classpath:ConduitApp/feature/Articles.feature:10
+classpath:ConduitApp/feature/Articles.feature:11
+classpath:ConduitApp/feature/Articles.feature:12
+
+testAll[1][2]  Time elapsed: 2.614 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+>> classpath:ConduitApp/feature/Articles.feature:14
+>> karate-config.js failed
+>> js failed:
+>>>>
+01: function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'dev';
+06:   }
+07:   var config = {
+08:     apiUrl: 'http://localhost:3000/api/'
+09:   }
+10:   if (env == 'dev') {
+11:     config.userEmail = 'test@test.coma'
+12:     config.userPassword = 'test' 
+13:   }
+14:   if (env == 'e2e') {
+15:     // customize
+16:   }
+17: 
+18:   var accessToken = karate.callSingle('classpath:helpers/CreateToken.feature', config).authToken
+19:   karate.configure('headers', { Authorization: 'Token ' + accessToken })
+20: 
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 422, expected: 200, response time in milliseconds: 34, url: http://localhost:3000/api/users/login, response: 
+{"errors":{"email or password":"is invalid"}}
+classpath:helpers/CreateToken.feature:8
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- <js>.fn(Unnamed:18)
+
+js failed:
+>>>>
+01: function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'dev';
+06:   }
+07:   var config = {
+08:     apiUrl: 'http://localhost:3000/api/'
+09:   }
+10:   if (env == 'dev') {
+11:     config.userEmail = 'test@test.coma'
+12:     config.userPassword = 'test' 
+13:   }
+14:   if (env == 'e2e') {
+15:     // customize
+16:   }
+17: 
+18:   var accessToken = karate.callSingle('classpath:helpers/CreateToken.feature', config).authToken
+19:   karate.configure('headers', { Authorization: 'Token ' + accessToken })
+20: 
+21:   return config;
+22: }
+<<<<
+com.intuit.karate.KarateException: js failed:
+>>>>
+01: function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'dev';
+06:   }
+07:   var config = {
+08:     apiUrl: 'http://localhost:3000/api/'
+09:   }
+10:   if (env == 'dev') {
+11:     config.userEmail = 'test@test.coma'
+12:     config.userPassword = 'test' 
+13:   }
+14:   if (env == 'e2e') {
+15:     // customize
+16:   }
+17: 
+18:   var accessToken = karate.callSingle('classpath:helpers/CreateToken.feature', config).authToken
+19:   karate.configure('headers', { Authorization: 'Token ' + accessToken })
+20: 
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 422, expected: 200, response time in milliseconds: 34, url: http://localhost:3000/api/users/login, response: 
+{"errors":{"email or password":"is invalid"}}
+classpath:helpers/CreateToken.feature:8
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- <js>.fn(Unnamed:18)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:ConduitApp/feature/Articles.feature:5
+classpath:ConduitApp/feature/Articles.feature:15
+classpath:ConduitApp/feature/Articles.feature:16
+classpath:ConduitApp/feature/Articles.feature:17
+classpath:ConduitApp/feature/Articles.feature:18
+classpath:ConduitApp/feature/Articles.feature:19
+classpath:ConduitApp/feature/Articles.feature:21
+classpath:ConduitApp/feature/Articles.feature:22
+classpath:ConduitApp/feature/Articles.feature:23
+classpath:ConduitApp/feature/Articles.feature:24
+classpath:ConduitApp/feature/Articles.feature:25
+classpath:ConduitApp/feature/Articles.feature:27
+classpath:ConduitApp/feature/Articles.feature:28
+classpath:ConduitApp/feature/Articles.feature:29
+classpath:ConduitApp/feature/Articles.feature:31
+classpath:ConduitApp/feature/Articles.feature:32
+classpath:ConduitApp/feature/Articles.feature:33
+classpath:ConduitApp/feature/Articles.feature:34
+classpath:ConduitApp/feature/Articles.feature:35
+
