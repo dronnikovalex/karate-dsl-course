@@ -2899,3 +2899,2126 @@ classpath:ConduitApp/feature/HomeWork.feature:98
 7 < Keep-Alive: timeout=5
 {"comments":[{"id":22,"body":"Oliver","createdAt":"2021-11-07T16:29:45.047Z","updatedAt":"2021-11-07T16:29:45.047Z","author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"id":20,"body":"Angel","createdAt":"2021-11-07T16:29:18.945Z","updatedAt":"2021-11-07T16:29:18.945Z","author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"id":16,"body":"Molly","createdAt":"2021-11-07T16:13:44.307Z","updatedAt":"2021-11-07T16:13:44.307Z","author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"id":15,"body":"Felix","createdAt":"2021-11-07T16:13:44.093Z","updatedAt":"2021-11-07T16:13:44.093Z","author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"id":14,"body":"Simba","createdAt":"2021-11-07T16:10:52.804Z","updatedAt":"2021-11-07T16:10:52.804Z","author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"id":13,"body":"Simba","createdAt":"2021-11-07T16:10:52.588Z","updatedAt":"2021-11-07T16:10:52.588Z","author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"id":12,"body":"Oliver","createdAt":"2021-11-07T16:09:49.187Z","updatedAt":"2021-11-07T16:09:49.187Z","author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"id":11,"body":"Oliver","createdAt":"2021-11-07T16:09:48.996Z","updatedAt":"2021-11-07T16:09:48.996Z","author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"id":10,"body":"Sam","createdAt":"2021-11-07T16:06:18.830Z","updatedAt":"2021-11-07T16:06:18.830Z","author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"id":9,"body":"Sam","createdAt":"2021-11-07T16:06:18.706Z","updatedAt":"2021-11-07T16:06:18.706Z","author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"id":7,"body":"Angel","createdAt":"2021-11-07T15:58:30.585Z","updatedAt":"2021-11-07T15:58:30.585Z","author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"id":6,"body":"Sooty","createdAt":"2021-11-07T15:58:15.251Z","updatedAt":"2021-11-07T15:58:15.251Z","author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"id":5,"body":"Max","createdAt":"2021-11-07T15:48:41.292Z","updatedAt":"2021-11-07T15:48:41.292Z","author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"id":4,"body":"Smudge","createdAt":"2021-11-07T15:48:26.715Z","updatedAt":"2021-11-07T15:48:26.715Z","author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"id":3,"body":"Molly","createdAt":"2021-11-07T15:44:17.967Z","updatedAt":"2021-11-07T15:44:17.967Z","author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"id":2,"body":"test","createdAt":"2021-11-07T15:29:03.506Z","updatedAt":"2021-11-07T15:29:03.506Z","author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}]}
 19:29:45.423 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'currentCommentCount' with new value: response.comments.length
+20:48:53.379 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+20:48:53.849 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:48:54.971 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:48:54.984 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+20:48:55.354 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+20:48:55.378 [main] ERROR com.intuit.karate - karate.org.apache.http.conn.HttpHostConnectException: Connect to localhost:3000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information, http call failed after 260 milliseconds for url: http://localhost:3000/api/users/login
+20:48:55.380 [main] ERROR com.intuit.karate - classpath:helpers/CreateToken.feature:7
+When method Post
+http call failed after 260 milliseconds for url: http://localhost:3000/api/users/login
+classpath:helpers/CreateToken.feature:7
+20:48:55.382 [main] WARN  com.intuit.karate - callSingle() will cache an exception
+20:48:55.382 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+20:48:55.382 [main] WARN  com.intuit.karate - callSingle() cached result is an exception
+20:48:55.400 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:4
+* print 'First scenario'
+>> classpath:ConduitApp/feature/Hooks.feature:3
+>> karate-config.js failed
+>> js failed:
+>>>>
+01: function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'dev';
+06:   }
+07:   var config = {
+08:     apiUrl: 'http://localhost:3000/api/'
+09:   }
+10:   if (env == 'dev') {
+11:     config.userEmail = 'test@test.com'
+12:     config.userPassword = 'test' 
+13:   }
+14:   if (env == 'e2e') {
+15:     // customize
+16:   }
+17: 
+18:   var accessToken = karate.callSingle('classpath:helpers/CreateToken.feature', config).authToken
+19:   karate.configure('headers', { Authorization: 'Token ' + accessToken })
+20: 
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: http call failed after 260 milliseconds for url: http://localhost:3000/api/users/login
+classpath:helpers/CreateToken.feature:7
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- <js>.fn(Unnamed:18)
+
+js failed:
+>>>>
+01: function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'dev';
+06:   }
+07:   var config = {
+08:     apiUrl: 'http://localhost:3000/api/'
+09:   }
+10:   if (env == 'dev') {
+11:     config.userEmail = 'test@test.com'
+12:     config.userPassword = 'test' 
+13:   }
+14:   if (env == 'e2e') {
+15:     // customize
+16:   }
+17: 
+18:   var accessToken = karate.callSingle('classpath:helpers/CreateToken.feature', config).authToken
+19:   karate.configure('headers', { Authorization: 'Token ' + accessToken })
+20: 
+21:   return config;
+22: }
+<<<<
+com.intuit.karate.KarateException: js failed:
+>>>>
+01: function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'dev';
+06:   }
+07:   var config = {
+08:     apiUrl: 'http://localhost:3000/api/'
+09:   }
+10:   if (env == 'dev') {
+11:     config.userEmail = 'test@test.com'
+12:     config.userPassword = 'test' 
+13:   }
+14:   if (env == 'e2e') {
+15:     // customize
+16:   }
+17: 
+18:   var accessToken = karate.callSingle('classpath:helpers/CreateToken.feature', config).authToken
+19:   karate.configure('headers', { Authorization: 'Token ' + accessToken })
+20: 
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: http call failed after 260 milliseconds for url: http://localhost:3000/api/users/login
+classpath:helpers/CreateToken.feature:7
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- <js>.fn(Unnamed:18)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:ConduitApp/feature/Hooks.feature:4
+20:48:55.429 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:48:55.430 [main] WARN  com.intuit.karate - callSingle() cached result is an exception
+20:48:55.436 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:7
+* print 'Second scenario'
+>> classpath:ConduitApp/feature/Hooks.feature:6
+>> karate-config.js failed
+>> js failed:
+>>>>
+01: function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'dev';
+06:   }
+07:   var config = {
+08:     apiUrl: 'http://localhost:3000/api/'
+09:   }
+10:   if (env == 'dev') {
+11:     config.userEmail = 'test@test.com'
+12:     config.userPassword = 'test' 
+13:   }
+14:   if (env == 'e2e') {
+15:     // customize
+16:   }
+17: 
+18:   var accessToken = karate.callSingle('classpath:helpers/CreateToken.feature', config).authToken
+19:   karate.configure('headers', { Authorization: 'Token ' + accessToken })
+20: 
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: http call failed after 260 milliseconds for url: http://localhost:3000/api/users/login
+classpath:helpers/CreateToken.feature:7
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- <js>.fn(Unnamed:18)
+
+js failed:
+>>>>
+01: function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'dev';
+06:   }
+07:   var config = {
+08:     apiUrl: 'http://localhost:3000/api/'
+09:   }
+10:   if (env == 'dev') {
+11:     config.userEmail = 'test@test.com'
+12:     config.userPassword = 'test' 
+13:   }
+14:   if (env == 'e2e') {
+15:     // customize
+16:   }
+17: 
+18:   var accessToken = karate.callSingle('classpath:helpers/CreateToken.feature', config).authToken
+19:   karate.configure('headers', { Authorization: 'Token ' + accessToken })
+20: 
+21:   return config;
+22: }
+<<<<
+com.intuit.karate.KarateException: js failed:
+>>>>
+01: function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'dev';
+06:   }
+07:   var config = {
+08:     apiUrl: 'http://localhost:3000/api/'
+09:   }
+10:   if (env == 'dev') {
+11:     config.userEmail = 'test@test.com'
+12:     config.userPassword = 'test' 
+13:   }
+14:   if (env == 'e2e') {
+15:     // customize
+16:   }
+17: 
+18:   var accessToken = karate.callSingle('classpath:helpers/CreateToken.feature', config).authToken
+19:   karate.configure('headers', { Authorization: 'Token ' + accessToken })
+20: 
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: http call failed after 260 milliseconds for url: http://localhost:3000/api/users/login
+classpath:helpers/CreateToken.feature:7
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- <js>.fn(Unnamed:18)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:ConduitApp/feature/Hooks.feature:7
+20:51:56.452 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+20:51:56.935 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:51:58.049 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:51:58.060 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+20:51:58.460 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+20:51:58.594 [main] DEBUG com.intuit.karate - response time in milliseconds: 131
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-xlDb6VyTKHXV+ZRV1Umw0g"
+1 < Date: Sun, 07 Nov 2021 17:51:58 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkxNTE4LCJpYXQiOjE2MzYzMDc1MTh9.ZWa43xZTwjNlAzsn2ucZvIgkqvRIwL2egE6TF4A7Opg","bio":null,"image":null}}
+20:51:58.604 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+20:51:58.617 [main] INFO  com.intuit.karate - [print] First scenario 
+20:51:58.634 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:51:58.641 [main] INFO  com.intuit.karate - [print] Second scenario 
+20:56:42.824 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+20:56:43.287 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:56:44.358 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:56:44.370 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+20:56:44.773 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+20:56:44.878 [main] DEBUG com.intuit.karate - response time in milliseconds: 103
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-akwADy0gClmP3Bsn10PDLQ"
+1 < Date: Sun, 07 Nov 2021 17:56:44 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkxODA0LCJpYXQiOjE2MzYzMDc4MDR9.LXcAdy_ns1NEsEfNC0t5kvbXEBvsp0lwxAFE6J10wJ4","bio":null,"image":null}}
+20:56:44.891 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+20:56:44.930 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:5
+* def result = call read('classpath:helpers/Dummy.features')
+js failed:
+>>>>
+01: read('classpath:helpers/Dummy.features')
+<<<<
+org.graalvm.polyglot.PolyglotException: not found: helpers/Dummy.features
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:122)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:76)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
+- <js>.:program(Unnamed:1)
+
+classpath:ConduitApp/feature/Hooks.feature:5
+20:56:44.959 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:56:44.974 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:5
+* def result = call read('classpath:helpers/Dummy.features')
+js failed:
+>>>>
+01: read('classpath:helpers/Dummy.features')
+<<<<
+org.graalvm.polyglot.PolyglotException: not found: helpers/Dummy.features
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:122)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:76)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:124)
+- <js>.:program(Unnamed:1)
+
+classpath:ConduitApp/feature/Hooks.feature:5
+20:57:01.422 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+20:57:01.862 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:57:02.961 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:57:02.975 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+20:57:03.389 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+20:57:03.505 [main] DEBUG com.intuit.karate - response time in milliseconds: 113
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-Bd6ZJp86G+zD5wVxLFLpgQ"
+1 < Date: Sun, 07 Nov 2021 17:57:03 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkxODIzLCJpYXQiOjE2MzYzMDc4MjN9.qe7ta3W9S6Q_EYSd0qFVyLoKbUXjvEszO5LX8e6-GZE","bio":null,"image":null}}
+20:57:03.516 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+20:57:03.567 [main] ERROR com.intuit.karate - classpath:helpers/Dummy.feature:4
+* def randomUsername = userData.getRandomUsername()
+js failed:
+>>>>
+01: userData.getRandomUsername()
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "userData" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:helpers/Dummy.feature:4
+20:57:03.567 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:5
+* def result = call read('classpath:helpers/Dummy.feature')
+js failed:
+>>>>
+01: userData.getRandomUsername()
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "userData" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:helpers/Dummy.feature:4
+classpath:ConduitApp/feature/Hooks.feature:5
+20:57:03.596 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:57:03.620 [main] ERROR com.intuit.karate - classpath:helpers/Dummy.feature:4
+* def randomUsername = userData.getRandomUsername()
+js failed:
+>>>>
+01: userData.getRandomUsername()
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "userData" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:helpers/Dummy.feature:4
+20:57:03.621 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:5
+* def result = call read('classpath:helpers/Dummy.feature')
+js failed:
+>>>>
+01: userData.getRandomUsername()
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "userData" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:helpers/Dummy.feature:4
+classpath:ConduitApp/feature/Hooks.feature:5
+20:57:32.031 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+20:57:32.475 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+20:57:33.572 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:57:33.587 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+20:57:34.016 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+20:57:34.120 [main] DEBUG com.intuit.karate - response time in milliseconds: 103
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-sRTO9AdcSa0YdcTMrWqWog"
+1 < Date: Sun, 07 Nov 2021 17:57:34 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkxODU0LCJpYXQiOjE2MzYzMDc4NTR9.QmPpWuNrjsM8rPxECFLNmiXCnjIiA-fQuMHxQh396ns","bio":null,"image":null}}
+20:57:34.132 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+20:57:34.348 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:6
+* def username = result.getRandomUsername()
+js failed:
+>>>>
+01: result.getRandomUsername()
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: invokeMember (getRandomUsername) on {randomUsername=colin, DataGenerator=helpers.DataGenerator} failed due to: Unknown identifier: getRandomUsername
+- <js>.:program(Unnamed:1)
+
+classpath:ConduitApp/feature/Hooks.feature:6
+20:57:34.379 [main] INFO  com.intuit.karate - karate.env system property was: null 
+20:57:34.433 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:6
+* def username = result.getRandomUsername()
+js failed:
+>>>>
+01: result.getRandomUsername()
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: invokeMember (getRandomUsername) on {randomUsername=dania, DataGenerator=helpers.DataGenerator} failed due to: Unknown identifier: getRandomUsername
+- <js>.:program(Unnamed:1)
+
+classpath:ConduitApp/feature/Hooks.feature:6
+21:00:02.571 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:00:03.006 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:00:04.141 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:00:04.154 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:00:04.552 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:00:04.655 [main] DEBUG com.intuit.karate - response time in milliseconds: 102
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-xlNraVq+twi2HpDCjPpJdQ"
+1 < Date: Sun, 07 Nov 2021 18:00:04 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkyMDA0LCJpYXQiOjE2MzYzMDgwMDR9.3FfeMxWyh4GrRhrHBNlo3Ogu3kRMqPbS_zf9nDXM56g","bio":null,"image":null}}
+21:00:04.666 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:00:04.866 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:6
+* def username = randomUsername
+js failed:
+>>>>
+01: randomUsername
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "randomUsername" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:ConduitApp/feature/Hooks.feature:6
+21:00:04.899 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:00:04.966 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:6
+* def username = randomUsername
+js failed:
+>>>>
+01: randomUsername
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "randomUsername" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:ConduitApp/feature/Hooks.feature:6
+21:00:41.146 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:00:41.593 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:00:42.605 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:00:42.619 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:00:42.999 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:00:43.107 [main] DEBUG com.intuit.karate - response time in milliseconds: 106
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-wnlPmvIFnszNDcXUqeZhnA"
+1 < Date: Sun, 07 Nov 2021 18:00:43 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkyMDQzLCJpYXQiOjE2MzYzMDgwNDN9.dt61PbvXXr5MPNBFhbYCaSb2QQLPhHBzwOsEwUEeJ8Y","bio":null,"image":null}}
+21:00:43.120 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:00:43.332 [main] INFO  com.intuit.karate - [print] First scenario 
+21:00:43.334 [main] INFO  com.intuit.karate - [print] darron 
+21:00:43.350 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:00:43.402 [main] INFO  com.intuit.karate - [print] Second scenario 
+21:00:43.403 [main] INFO  com.intuit.karate - [print] barry 
+21:05:01.517 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:05:01.981 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:05:03.071 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:05:03.082 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:05:03.497 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:05:03.608 [main] DEBUG com.intuit.karate - response time in milliseconds: 109
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-SmFxogwrHiq0ASrMc1BHmw"
+1 < Date: Sun, 07 Nov 2021 18:05:03 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkyMzAzLCJpYXQiOjE2MzYzMDgzMDN9.By-XcXzd9EICc8ECdwXsQPPpZljE78DfN0H3fLJoJZE","bio":null,"image":null}}
+21:05:03.620 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:05:03.641 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:helpers/Dummy.feature')
+21:05:03.830 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:helpers/Dummy.feature')
+21:05:03.834 [main] INFO  com.intuit.karate - [print] First scenario 
+21:05:03.836 [main] INFO  com.intuit.karate - [print] kathryn 
+21:05:03.852 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:05:03.862 [main] INFO  com.intuit.karate - [print] Second scenario 
+21:05:03.863 [main] INFO  com.intuit.karate - [print] kathryn 
+21:07:12.705 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:07:13.237 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:07:14.544 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:07:14.565 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:07:15.002 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:07:15.120 [main] DEBUG com.intuit.karate - response time in milliseconds: 116
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-InhPI1dylNHdtFaOcJV7xg"
+1 < Date: Sun, 07 Nov 2021 18:07:15 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkyNDM1LCJpYXQiOjE2MzYzMDg0MzV9.HGmrVZWXtSnO9Z6Td3FaUuXnGIJFDYY-9vLDrVTAFyc","bio":null,"image":null}}
+21:07:15.134 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:07:15.150 [main] INFO  com.intuit.karate - [print] First scenario 
+21:07:15.173 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:15
+* print username
+js failed:
+>>>>
+01: karate.log('[print]',username)
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "username" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:ConduitApp/feature/Hooks.feature:15
+21:07:15.209 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:07:15.215 [main] INFO  com.intuit.karate - [print] Second scenario 
+21:07:15.220 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:18
+* print username
+js failed:
+>>>>
+01: karate.log('[print]',username)
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "username" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:ConduitApp/feature/Hooks.feature:18
+21:07:36.401 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:07:36.839 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:07:37.952 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:07:37.965 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:07:38.363 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:07:38.464 [main] DEBUG com.intuit.karate - response time in milliseconds: 99
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-eQRhNcU4CjSuZ+LCY0JKnA"
+1 < Date: Sun, 07 Nov 2021 18:07:38 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkyNDU4LCJpYXQiOjE2MzYzMDg0NTh9.EG3IzhdjktKgST5_LoAxmDBTq344cQO31DCI11-O7PU","bio":null,"image":null}}
+21:07:38.474 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:07:38.487 [main] INFO  com.intuit.karate - [print] First scenario 
+21:07:38.501 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:07:38.505 [main] INFO  com.intuit.karate - [print] Second scenario 
+21:08:40.217 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:08:40.653 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:08:41.767 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:08:41.782 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:08:42.157 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:08:42.260 [main] DEBUG com.intuit.karate - response time in milliseconds: 102
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-HdKVeX2Ac2mRyWw0kq9aYg"
+1 < Date: Sun, 07 Nov 2021 18:08:42 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkyNTIyLCJpYXQiOjE2MzYzMDg1MjJ9.gv8aIMCZtzi38e2hTcDEnxmUpZ0dVz_dCFlS7wqwsfs","bio":null,"image":null}}
+21:08:42.271 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:08:42.283 [main] INFO  com.intuit.karate - [print] First scenario 
+21:08:42.302 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:15
+* print username
+js failed:
+>>>>
+01: karate.log('[print]',username)
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "username" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:ConduitApp/feature/Hooks.feature:15
+21:08:42.326 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:08:42.332 [main] INFO  com.intuit.karate - [print] Second scenario 
+21:08:42.334 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:18
+* print username
+js failed:
+>>>>
+01: karate.log('[print]',username)
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "username" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:ConduitApp/feature/Hooks.feature:18
+21:09:48.178 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:09:48.625 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:09:49.688 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:09:49.700 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:09:50.071 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:09:50.174 [main] DEBUG com.intuit.karate - response time in milliseconds: 101
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-4kZoO/e1Nu+CTjN7wk8d6g"
+1 < Date: Sun, 07 Nov 2021 18:09:50 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkyNTkwLCJpYXQiOjE2MzYzMDg1OTB9.6_nlwqrBrBea0zptl8q7jkvluDsAtDVunKr3m4jqDfQ","bio":null,"image":null}}
+21:09:50.185 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:09:50.198 [main] INFO  com.intuit.karate - [print] First scenario 
+21:09:50.217 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:16
+* print username
+js failed:
+>>>>
+01: karate.log('[print]',username)
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "username" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:ConduitApp/feature/Hooks.feature:16
+21:09:50.242 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:09:50.247 [main] INFO  com.intuit.karate - [print] Second scenario 
+21:09:50.249 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:19
+* print username
+js failed:
+>>>>
+01: karate.log('[print]',username)
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "username" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:ConduitApp/feature/Hooks.feature:19
+21:10:02.556 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:10:03.010 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:10:04.078 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:10:04.091 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:10:04.497 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:10:04.601 [main] DEBUG com.intuit.karate - response time in milliseconds: 102
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-I6vBvzn5jfr2yzYTnRRylQ"
+1 < Date: Sun, 07 Nov 2021 18:10:04 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkyNjA0LCJpYXQiOjE2MzYzMDg2MDR9.MXum8akfP7dNbSv9Vde2iCpiKKj0ZUin29fWzHQKMYg","bio":null,"image":null}}
+21:10:04.610 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:10:04.619 [main] INFO  com.intuit.karate - [print] First scenario 
+21:10:04.635 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:16
+* print username
+js failed:
+>>>>
+01: karate.log('[print]',username)
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "username" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:ConduitApp/feature/Hooks.feature:16
+21:10:04.653 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:10:04.657 [main] INFO  com.intuit.karate - [print] Second scenario 
+21:10:04.659 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/Hooks.feature:19
+* print username
+js failed:
+>>>>
+01: karate.log('[print]',username)
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "username" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:ConduitApp/feature/Hooks.feature:19
+21:10:25.602 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:10:26.047 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:10:27.125 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:10:27.138 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:10:27.507 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:10:27.612 [main] DEBUG com.intuit.karate - response time in milliseconds: 102
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-yz9RB5yx9mqijIUTTiPFRw"
+1 < Date: Sun, 07 Nov 2021 18:10:27 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkyNjI3LCJpYXQiOjE2MzYzMDg2Mjd9.ZbOPutZC7NJnwEkrhjZos2zsOVNnPgfFCupbjhAF8Kc","bio":null,"image":null}}
+21:10:27.623 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:10:27.638 [main] INFO  com.intuit.karate - [print] First scenario 
+21:10:27.652 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:10:27.658 [main] INFO  com.intuit.karate - [print] Second scenario 
+21:10:58.113 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:10:58.581 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:10:59.696 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:10:59.708 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:11:00.084 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:11:00.188 [main] DEBUG com.intuit.karate - response time in milliseconds: 101
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-W8pnwGNvIYRY+lYMgk/faQ"
+1 < Date: Sun, 07 Nov 2021 18:11:00 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkyNjYwLCJpYXQiOjE2MzYzMDg2NjB9.qzXsh89PXaA76eolubd6BIuXhHwXM-h_Q2qyBaWmMcM","bio":null,"image":null}}
+21:11:00.198 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:11:00.210 [main] INFO  com.intuit.karate - [print] First scenario 
+21:11:00.221 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:11:00.226 [main] INFO  com.intuit.karate - [print] Second scenario 
+21:17:14.680 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:17:15.135 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:17:16.200 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:17:16.213 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:17:16.599 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:17:16.703 [main] DEBUG com.intuit.karate - response time in milliseconds: 102
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-YzKoz47DWtT29cmqEjP5vg"
+1 < Date: Sun, 07 Nov 2021 18:17:16 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkzMDM2LCJpYXQiOjE2MzYzMDkwMzZ9.pUafGDFIEFBkkxmtT4p_dYNuTSjxqt7PtieQZBvnXrk","bio":null,"image":null}}
+21:17:16.713 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:17:16.727 [main] INFO  com.intuit.karate - [print] First scenario 
+21:17:16.914 [main] INFO  com.intuit.karate - [print] andy 
+21:17:16.933 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:17:16.943 [main] INFO  com.intuit.karate - [print] Second scenario 
+21:17:17.017 [main] INFO  com.intuit.karate - [print] del 
+21:17:40.581 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:17:41.059 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:17:42.167 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:17:42.183 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:17:42.576 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:17:42.677 [main] DEBUG com.intuit.karate - response time in milliseconds: 99
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-JzBxg79dT3mx9kGeSynE2A"
+1 < Date: Sun, 07 Nov 2021 18:17:42 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkzMDYyLCJpYXQiOjE2MzYzMDkwNjJ9.gNzJzOQbFN6cgjGfMPR43BrRHBYndouH1hgV6DFZOmI","bio":null,"image":null}}
+21:17:42.689 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:17:42.704 [main] INFO  com.intuit.karate - [print] First scenario 
+21:17:42.721 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:17:42.727 [main] INFO  com.intuit.karate - [print] Second scenario 
+21:18:02.090 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:18:02.569 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:18:03.672 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:18:03.688 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:18:04.062 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:18:04.165 [main] DEBUG com.intuit.karate - response time in milliseconds: 102
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-GlgbwzmQti7ThAKD9wo/FQ"
+1 < Date: Sun, 07 Nov 2021 18:18:04 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkzMDg0LCJpYXQiOjE2MzYzMDkwODR9.AABD1Nw4LkgA4OSQPh4MoaVTbydldYJcClzeAtii6Yg","bio":null,"image":null}}
+21:18:04.177 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:18:04.191 [main] INFO  com.intuit.karate - [print] First scenario 
+21:18:04.206 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:18:04.211 [main] INFO  com.intuit.karate - [print] Second scenario 
+21:18:52.792 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:18:53.342 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:18:54.606 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:18:54.619 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:18:55.045 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:18:55.165 [main] DEBUG com.intuit.karate - response time in milliseconds: 117
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-3dAgleZp2LI16P1ltbq2XQ"
+1 < Date: Sun, 07 Nov 2021 18:18:55 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkzMTM1LCJpYXQiOjE2MzYzMDkxMzV9.zq8mu2wem4ECnf4s3dzsVQCvHyZGPiBBROVbLiwNKec","bio":null,"image":null}}
+21:18:55.179 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:18:55.194 [main] INFO  com.intuit.karate - [print] First scenario 
+21:18:55.382 [main] INFO  com.intuit.karate - [print] tad 
+21:18:55.425 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:18:55.437 [main] INFO  com.intuit.karate - [print] Second scenario 
+21:18:55.499 [main] INFO  com.intuit.karate - [print] leonarda 
+21:19:50.448 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:19:50.881 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:19:52.018 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:19:52.032 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:19:52.439 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:19:52.545 [main] DEBUG com.intuit.karate - response time in milliseconds: 103
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-c4SkhVyf2Yt2MBnP9+n4nQ"
+1 < Date: Sun, 07 Nov 2021 18:19:52 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkzMTkyLCJpYXQiOjE2MzYzMDkxOTJ9.IrBEXFqaUxMZb5PD-CGufIdKWgd7xRHft8BNXmlC1ZI","bio":null,"image":null}}
+21:19:52.555 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:19:52.570 [main] INFO  com.intuit.karate - [print] First scenario 
+21:19:52.749 [main] INFO  com.intuit.karate - [print] gordon 
+21:19:52.766 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:19:52.773 [main] INFO  com.intuit.karate - [print] Second scenario 
+21:19:52.819 [main] INFO  com.intuit.karate - [print] murray 
+21:23:44.084 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+21:23:44.518 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:23:45.639 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:23:45.651 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+21:23:46.058 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+21:23:46.163 [main] DEBUG com.intuit.karate - response time in milliseconds: 102
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-a+DG0e+gqDWOXsPhvlnk4Q"
+1 < Date: Sun, 07 Nov 2021 18:23:46 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDkzNDI2LCJpYXQiOjE2MzYzMDk0MjZ9.zz2wp_v93Cc03PXqX_0yBIXawQ1PsUZYiYAuTlOB8d4","bio":null,"image":null}}
+21:23:46.176 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+21:23:46.194 [main] INFO  com.intuit.karate - [print] First scenario 
+21:23:46.375 [main] INFO  com.intuit.karate - [print] dimple 
+21:23:46.394 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:23:46.402 [main] INFO  com.intuit.karate - [print] Second scenario 
+21:23:46.454 [main] INFO  com.intuit.karate - [print] wayne 
+22:37:08.029 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+22:37:08.634 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:37:10.554 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:37:10.571 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+22:37:11.164 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+22:37:11.319 [main] DEBUG com.intuit.karate - response time in milliseconds: 153
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-YxlUPesMl/dcc5dsSKiXyw"
+1 < Date: Sun, 07 Nov 2021 19:37:11 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk3ODMxLCJpYXQiOjE2MzYzMTM4MzF9.0nxGp3AzqZUvRsKJo_0VcPYBB8fSaOxTr-QMALDX798","bio":null,"image":null}}
+22:37:11.334 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+22:37:11.395 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:3000/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk3ODMxLCJpYXQiOjE2MzYzMTM4MzF9.0nxGp3AzqZUvRsKJo_0VcPYBB8fSaOxTr-QMALDX798
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:37:11.518 [main] DEBUG com.intuit.karate - response time in milliseconds: 123
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 3556
+1 < ETag: W/"de4-Ho8G1OWEYpUUGs4VNMFxcg"
+1 < Date: Sun, 07 Nov 2021 19:37:11 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":false,"favoritesCount":0,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:37:11.621 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/articles/cc-2b8x7f/favourite
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk3ODMxLCJpYXQiOjE2MzYzMTM4MzF9.0nxGp3AzqZUvRsKJo_0VcPYBB8fSaOxTr-QMALDX798
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 2
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{}
+
+22:37:11.627 [main] DEBUG com.intuit.karate - response time in milliseconds: 6
+1 < 404
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: text/html; charset=utf-8
+1 < Content-Length: 54
+1 < ETag: W/"36-TdCWzNPTo//yKeXdIPi17w"
+1 < Date: Sun, 07 Nov 2021 19:37:11 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+error: 404 Not Found /api/articles/cc-2b8x7f/favourite
+22:37:11.630 [main] ERROR com.intuit.karate - classpath:helpers/AddLikes.feature:9
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 6, url: http://localhost:3000/api/articles/cc-2b8x7f/favourite, response: 
+error: 404 Not Found /api/articles/cc-2b8x7f/favourite
+classpath:helpers/AddLikes.feature:9
+22:37:11.643 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/HomePage.feature:60
+* if (favoritesCount == 0) karate.call('classpath:helpers/AddLikes.feature', article)
+js failed:
+>>>>
+01: if (favoritesCount == 0) karate.call('classpath:helpers/AddLikes.feature', article)
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 404, expected: 200, response time in milliseconds: 6, url: http://localhost:3000/api/articles/cc-2b8x7f/favourite, response: 
+error: 404 Not Found /api/articles/cc-2b8x7f/favourite
+classpath:helpers/AddLikes.feature:9
+- com.intuit.karate.core.FeatureResult.getErrorMessagesCombined(FeatureResult.java:217)
+- com.intuit.karate.core.ScenarioEngine.callFeature(ScenarioEngine.java:2013)
+- com.intuit.karate.core.ScenarioEngine.call(ScenarioEngine.java:1909)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:163)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:153)
+- <js>.:program(Unnamed:1)
+
+classpath:ConduitApp/feature/HomePage.feature:60
+22:40:13.547 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+22:40:14.203 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:40:15.745 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:40:15.762 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+22:40:16.270 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+22:40:16.401 [main] DEBUG com.intuit.karate - response time in milliseconds: 128
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-kf/1r/Wp/ReWzOWwMkn5cw"
+1 < Date: Sun, 07 Nov 2021 19:40:16 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4MDE2LCJpYXQiOjE2MzYzMTQwMTZ9.jB00nLJn9CmqAUomG-6ogAR8rpECYImZV7yxCkh7K8k","bio":null,"image":null}}
+22:40:16.413 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+22:40:16.469 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:3000/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4MDE2LCJpYXQiOjE2MzYzMTQwMTZ9.jB00nLJn9CmqAUomG-6ogAR8rpECYImZV7yxCkh7K8k
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:40:16.573 [main] DEBUG com.intuit.karate - response time in milliseconds: 104
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 3556
+1 < ETag: W/"de4-Ho8G1OWEYpUUGs4VNMFxcg"
+1 < Date: Sun, 07 Nov 2021 19:40:16 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":false,"favoritesCount":0,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:40:16.656 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/articles/cc-2b8x7f/favorite
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4MDE2LCJpYXQiOjE2MzYzMTQwMTZ9.jB00nLJn9CmqAUomG-6ogAR8rpECYImZV7yxCkh7K8k
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:40:16.759 [main] DEBUG com.intuit.karate - response time in milliseconds: 102
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 327
+1 < ETag: W/"147-815T0O8jDaYxog6zr35f+w"
+1 < Date: Sun, 07 Nov 2021 19:40:16 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"article":{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}}
+22:40:16.768 [main] DEBUG com.intuit.karate - request:
+2 > GET http://localhost:3000/api/articles?offset=0&limit=10
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4MDE2LCJpYXQiOjE2MzYzMTQwMTZ9.jB00nLJn9CmqAUomG-6ogAR8rpECYImZV7yxCkh7K8k
+2 > Host: localhost:3000
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+22:40:16.890 [main] DEBUG com.intuit.karate - response time in milliseconds: 122
+2 < 200
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 3555
+2 < ETag: W/"de3-CejMzQMoIu7iFfOvGZ4/CQ"
+2 < Date: Sun, 07 Nov 2021 19:40:16 GMT
+2 < Connection: keep-alive
+2 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:44:52.426 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+22:44:53.087 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:44:54.662 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:44:54.680 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+22:44:55.315 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+22:44:55.475 [main] DEBUG com.intuit.karate - response time in milliseconds: 158
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-ATKQ1VhUVFeWm8KowFI7FQ"
+1 < Date: Sun, 07 Nov 2021 19:44:55 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4Mjk1LCJpYXQiOjE2MzYzMTQyOTV9.ORSTcnZNfV5typPonivdI07vW3Zz32pSzsc0frB_tAE","bio":null,"image":null}}
+22:44:55.490 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+22:44:55.549 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:3000/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4Mjk1LCJpYXQiOjE2MzYzMTQyOTV9.ORSTcnZNfV5typPonivdI07vW3Zz32pSzsc0frB_tAE
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:44:55.662 [main] DEBUG com.intuit.karate - response time in milliseconds: 112
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 3556
+1 < ETag: W/"de4-4aAaOZbw1tuhCeDFxZw1lQ"
+1 < Date: Sun, 07 Nov 2021 19:44:55 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":false,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:44:55.686 [main] DEBUG com.intuit.karate - request:
+2 > GET http://localhost:3000/api/articles?offset=0&limit=10
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4Mjk1LCJpYXQiOjE2MzYzMTQyOTV9.ORSTcnZNfV5typPonivdI07vW3Zz32pSzsc0frB_tAE
+2 > Host: localhost:3000
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+22:44:55.827 [main] DEBUG com.intuit.karate - response time in milliseconds: 139
+2 < 200
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 3556
+2 < ETag: W/"de4-4aAaOZbw1tuhCeDFxZw1lQ"
+2 < Date: Sun, 07 Nov 2021 19:44:55 GMT
+2 < Connection: keep-alive
+2 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":false,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:53:06.128 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+22:53:06.750 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:53:08.484 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:53:08.510 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+22:53:09.097 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+22:53:09.254 [main] DEBUG com.intuit.karate - response time in milliseconds: 155
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-cIaE8UL/tuCixu6sq7kBZw"
+1 < Date: Sun, 07 Nov 2021 19:53:09 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4Nzg5LCJpYXQiOjE2MzYzMTQ3ODl9.w9_yReGQ1WYaodDSGd5JrypUFPqXXIrIinZHEl_NL_U","bio":null,"image":null}}
+22:53:09.270 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+22:53:09.327 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:3000/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4Nzg5LCJpYXQiOjE2MzYzMTQ3ODl9.w9_yReGQ1WYaodDSGd5JrypUFPqXXIrIinZHEl_NL_U
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:53:09.428 [main] DEBUG com.intuit.karate - response time in milliseconds: 100
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 3556
+1 < ETag: W/"de4-Ho8G1OWEYpUUGs4VNMFxcg"
+1 < Date: Sun, 07 Nov 2021 19:53:09 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":false,"favoritesCount":0,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:53:09.523 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/articles/cc-2b8x7f/favorite
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4Nzg5LCJpYXQiOjE2MzYzMTQ3ODl9.w9_yReGQ1WYaodDSGd5JrypUFPqXXIrIinZHEl_NL_U
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:53:09.574 [main] DEBUG com.intuit.karate - response time in milliseconds: 50
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 327
+1 < ETag: W/"147-815T0O8jDaYxog6zr35f+w"
+1 < Date: Sun, 07 Nov 2021 19:53:09 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"article":{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}}
+22:53:09.614 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/articles/cc-2b8x7f/favorite
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4Nzg5LCJpYXQiOjE2MzYzMTQ3ODl9.w9_yReGQ1WYaodDSGd5JrypUFPqXXIrIinZHEl_NL_U
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:53:09.644 [main] DEBUG com.intuit.karate - response time in milliseconds: 29
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 327
+1 < ETag: W/"147-815T0O8jDaYxog6zr35f+w"
+1 < Date: Sun, 07 Nov 2021 19:53:09 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"article":{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}}
+22:53:09.653 [main] DEBUG com.intuit.karate - request:
+2 > GET http://localhost:3000/api/articles?offset=0&limit=10
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4Nzg5LCJpYXQiOjE2MzYzMTQ3ODl9.w9_yReGQ1WYaodDSGd5JrypUFPqXXIrIinZHEl_NL_U
+2 > Host: localhost:3000
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+22:53:09.823 [main] DEBUG com.intuit.karate - response time in milliseconds: 170
+2 < 200
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 3555
+2 < ETag: W/"de3-CejMzQMoIu7iFfOvGZ4/CQ"
+2 < Date: Sun, 07 Nov 2021 19:53:09 GMT
+2 < Connection: keep-alive
+2 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:53:09.848 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/HomePage.feature:71
+And match response.articles[0].favoritesCount == favoritesCount
+match failed: EQUALS
+  $ | not equal (NUMBER:NUMBER)
+  1
+  0
+
+classpath:ConduitApp/feature/HomePage.feature:71
+22:54:03.209 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+22:54:03.988 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:54:05.879 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:54:05.898 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+22:54:06.472 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+22:54:06.612 [main] DEBUG com.intuit.karate - response time in milliseconds: 137
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-yG1jAzYhBU7+5ch+pGxPPQ"
+1 < Date: Sun, 07 Nov 2021 19:54:06 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4ODQ2LCJpYXQiOjE2MzYzMTQ4NDZ9.70Bs3aUR_Sq5IYvPqQxOQssFfvTd17HHN98GRpxaMyM","bio":null,"image":null}}
+22:54:06.628 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+22:54:06.692 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:3000/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4ODQ2LCJpYXQiOjE2MzYzMTQ4NDZ9.70Bs3aUR_Sq5IYvPqQxOQssFfvTd17HHN98GRpxaMyM
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:54:06.792 [main] DEBUG com.intuit.karate - response time in milliseconds: 100
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 3555
+1 < ETag: W/"de3-CejMzQMoIu7iFfOvGZ4/CQ"
+1 < Date: Sun, 07 Nov 2021 19:54:06 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:54:06.820 [main] DEBUG com.intuit.karate - request:
+2 > GET http://localhost:3000/api/articles?offset=0&limit=10
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4ODQ2LCJpYXQiOjE2MzYzMTQ4NDZ9.70Bs3aUR_Sq5IYvPqQxOQssFfvTd17HHN98GRpxaMyM
+2 > Host: localhost:3000
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+22:54:06.951 [main] DEBUG com.intuit.karate - response time in milliseconds: 130
+2 < 200
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 3555
+2 < ETag: W/"de3-CejMzQMoIu7iFfOvGZ4/CQ"
+2 < Date: Sun, 07 Nov 2021 19:54:06 GMT
+2 < Connection: keep-alive
+2 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:54:36.207 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+22:54:36.825 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:54:38.813 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:54:38.846 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+22:54:39.468 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+22:54:39.597 [main] DEBUG com.intuit.karate - response time in milliseconds: 127
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-JdCZHtuTtVJ9izt4LV7kPw"
+1 < Date: Sun, 07 Nov 2021 19:54:39 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4ODc5LCJpYXQiOjE2MzYzMTQ4Nzl9.0V8SyYvbXkqT1h6n6QO264tU_4i--xgWGbXxa4XzW2g","bio":null,"image":null}}
+22:54:39.613 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+22:54:39.673 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:3000/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4ODc5LCJpYXQiOjE2MzYzMTQ4Nzl9.0V8SyYvbXkqT1h6n6QO264tU_4i--xgWGbXxa4XzW2g
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:54:39.760 [main] DEBUG com.intuit.karate - response time in milliseconds: 87
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 3556
+1 < ETag: W/"de4-Ho8G1OWEYpUUGs4VNMFxcg"
+1 < Date: Sun, 07 Nov 2021 19:54:39 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":false,"favoritesCount":0,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:54:39.854 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/articles/cc-2b8x7f/favorite
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4ODc5LCJpYXQiOjE2MzYzMTQ4Nzl9.0V8SyYvbXkqT1h6n6QO264tU_4i--xgWGbXxa4XzW2g
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:54:40.040 [main] DEBUG com.intuit.karate - response time in milliseconds: 185
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 327
+1 < ETag: W/"147-815T0O8jDaYxog6zr35f+w"
+1 < Date: Sun, 07 Nov 2021 19:54:40 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"article":{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}}
+22:54:40.074 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/articles/cc-2b8x7f/favorite
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4ODc5LCJpYXQiOjE2MzYzMTQ4Nzl9.0V8SyYvbXkqT1h6n6QO264tU_4i--xgWGbXxa4XzW2g
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:54:40.106 [main] DEBUG com.intuit.karate - response time in milliseconds: 31
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 327
+1 < ETag: W/"147-815T0O8jDaYxog6zr35f+w"
+1 < Date: Sun, 07 Nov 2021 19:54:40 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"article":{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}}
+22:54:40.115 [main] DEBUG com.intuit.karate - request:
+2 > GET http://localhost:3000/api/articles?offset=0&limit=10
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4ODc5LCJpYXQiOjE2MzYzMTQ4Nzl9.0V8SyYvbXkqT1h6n6QO264tU_4i--xgWGbXxa4XzW2g
+2 > Host: localhost:3000
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+22:54:40.228 [main] DEBUG com.intuit.karate - response time in milliseconds: 113
+2 < 200
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 3555
+2 < ETag: W/"de3-CejMzQMoIu7iFfOvGZ4/CQ"
+2 < Date: Sun, 07 Nov 2021 19:54:40 GMT
+2 < Connection: keep-alive
+2 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:54:40.247 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/HomePage.feature:71
+And match response.articles[0].favoritesCount == favoritesCount
+match failed: EQUALS
+  $ | not equal (NUMBER:NUMBER)
+  1
+  0
+
+classpath:ConduitApp/feature/HomePage.feature:71
+22:55:07.597 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+22:55:08.267 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:55:09.902 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:55:09.920 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+22:55:10.482 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+22:55:10.614 [main] DEBUG com.intuit.karate - response time in milliseconds: 130
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-FPM2KtT2RyzcMa1rWWlu9Q"
+1 < Date: Sun, 07 Nov 2021 19:55:10 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4OTEwLCJpYXQiOjE2MzYzMTQ5MTB9.C_Ie4tAW8s7V663WBKM_tQmKDR6cMciuOJEZpElcHiQ","bio":null,"image":null}}
+22:55:10.627 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+22:55:10.689 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:3000/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4OTEwLCJpYXQiOjE2MzYzMTQ5MTB9.C_Ie4tAW8s7V663WBKM_tQmKDR6cMciuOJEZpElcHiQ
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:55:10.785 [main] DEBUG com.intuit.karate - response time in milliseconds: 96
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 3555
+1 < ETag: W/"de3-CejMzQMoIu7iFfOvGZ4/CQ"
+1 < Date: Sun, 07 Nov 2021 19:55:10 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:55:10.871 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/articles/cc-2b8x7f/favorite
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4OTEwLCJpYXQiOjE2MzYzMTQ5MTB9.C_Ie4tAW8s7V663WBKM_tQmKDR6cMciuOJEZpElcHiQ
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:55:10.893 [main] DEBUG com.intuit.karate - response time in milliseconds: 21
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 327
+1 < ETag: W/"147-815T0O8jDaYxog6zr35f+w"
+1 < Date: Sun, 07 Nov 2021 19:55:10 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"article":{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}}
+22:55:10.901 [main] DEBUG com.intuit.karate - request:
+2 > GET http://localhost:3000/api/articles?offset=0&limit=10
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4OTEwLCJpYXQiOjE2MzYzMTQ5MTB9.C_Ie4tAW8s7V663WBKM_tQmKDR6cMciuOJEZpElcHiQ
+2 > Host: localhost:3000
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+22:55:11.012 [main] DEBUG com.intuit.karate - response time in milliseconds: 110
+2 < 200
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 3555
+2 < ETag: W/"de3-CejMzQMoIu7iFfOvGZ4/CQ"
+2 < Date: Sun, 07 Nov 2021 19:55:11 GMT
+2 < Connection: keep-alive
+2 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:56:10.576 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+22:56:11.441 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:56:13.351 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:56:13.370 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+22:56:14.172 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+22:56:14.393 [main] DEBUG com.intuit.karate - response time in milliseconds: 218
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-gBWB+HjGfltLjtYRDroJFA"
+1 < Date: Sun, 07 Nov 2021 19:56:14 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4OTc0LCJpYXQiOjE2MzYzMTQ5NzR9.ThgQYBsTkEhVCk4TcTWpHcy8w-34xYSYNMJBZLqetS4","bio":null,"image":null}}
+22:56:14.407 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+22:56:14.502 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:3000/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4OTc0LCJpYXQiOjE2MzYzMTQ5NzR9.ThgQYBsTkEhVCk4TcTWpHcy8w-34xYSYNMJBZLqetS4
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:56:14.689 [main] DEBUG com.intuit.karate - response time in milliseconds: 186
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 3556
+1 < ETag: W/"de4-Ho8G1OWEYpUUGs4VNMFxcg"
+1 < Date: Sun, 07 Nov 2021 19:56:14 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":false,"favoritesCount":0,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:56:14.789 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/articles/cc-2b8x7f/favorite
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4OTc0LCJpYXQiOjE2MzYzMTQ5NzR9.ThgQYBsTkEhVCk4TcTWpHcy8w-34xYSYNMJBZLqetS4
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:56:14.819 [main] DEBUG com.intuit.karate - response time in milliseconds: 29
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 327
+1 < ETag: W/"147-815T0O8jDaYxog6zr35f+w"
+1 < Date: Sun, 07 Nov 2021 19:56:14 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"article":{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}}
+22:56:14.861 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/articles/cc-2b8x7f/favorite
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4OTc0LCJpYXQiOjE2MzYzMTQ5NzR9.ThgQYBsTkEhVCk4TcTWpHcy8w-34xYSYNMJBZLqetS4
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:56:14.896 [main] DEBUG com.intuit.karate - response time in milliseconds: 35
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 327
+1 < ETag: W/"147-815T0O8jDaYxog6zr35f+w"
+1 < Date: Sun, 07 Nov 2021 19:56:14 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"article":{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}}
+22:56:14.903 [main] DEBUG com.intuit.karate - request:
+2 > GET http://localhost:3000/api/articles?offset=0&limit=10
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk4OTc0LCJpYXQiOjE2MzYzMTQ5NzR9.ThgQYBsTkEhVCk4TcTWpHcy8w-34xYSYNMJBZLqetS4
+2 > Host: localhost:3000
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+22:56:15.185 [main] DEBUG com.intuit.karate - response time in milliseconds: 281
+2 < 200
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 3555
+2 < ETag: W/"de3-CejMzQMoIu7iFfOvGZ4/CQ"
+2 < Date: Sun, 07 Nov 2021 19:56:15 GMT
+2 < Connection: keep-alive
+2 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:56:15.207 [main] ERROR com.intuit.karate - classpath:ConduitApp/feature/HomePage.feature:70
+And match response.articles[0].favoritesCount == favoritesCount
+match failed: EQUALS
+  $ | not equal (NUMBER:NUMBER)
+  1
+  0
+
+classpath:ConduitApp/feature/HomePage.feature:70
+22:56:38.754 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+22:56:39.524 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:56:41.063 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:56:41.089 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+22:56:41.670 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+22:56:41.805 [main] DEBUG com.intuit.karate - response time in milliseconds: 133
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-7FAkWSLpTgGCTN7dJdI5pA"
+1 < Date: Sun, 07 Nov 2021 19:56:41 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MDAxLCJpYXQiOjE2MzYzMTUwMDF9.eEP1-TnLAzR_-I9lNUkMyT-Zthy2SxeJn4Y9adia2EM","bio":null,"image":null}}
+22:56:41.820 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+22:56:41.883 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:3000/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MDAxLCJpYXQiOjE2MzYzMTUwMDF9.eEP1-TnLAzR_-I9lNUkMyT-Zthy2SxeJn4Y9adia2EM
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:56:41.973 [main] DEBUG com.intuit.karate - response time in milliseconds: 89
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 3555
+1 < ETag: W/"de3-CejMzQMoIu7iFfOvGZ4/CQ"
+1 < Date: Sun, 07 Nov 2021 19:56:41 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:56:41.998 [main] DEBUG com.intuit.karate - request:
+2 > GET http://localhost:3000/api/articles?offset=0&limit=10
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MDAxLCJpYXQiOjE2MzYzMTUwMDF9.eEP1-TnLAzR_-I9lNUkMyT-Zthy2SxeJn4Y9adia2EM
+2 > Host: localhost:3000
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+22:56:42.126 [main] DEBUG com.intuit.karate - response time in milliseconds: 127
+2 < 200
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 3555
+2 < ETag: W/"de3-CejMzQMoIu7iFfOvGZ4/CQ"
+2 < Date: Sun, 07 Nov 2021 19:56:42 GMT
+2 < Connection: keep-alive
+2 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:57:06.994 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+22:57:07.598 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:57:09.156 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:57:09.179 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+22:57:09.768 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+22:57:09.898 [main] DEBUG com.intuit.karate - response time in milliseconds: 128
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-XBwT/jjwUh2aPJqbDU23kg"
+1 < Date: Sun, 07 Nov 2021 19:57:09 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MDI5LCJpYXQiOjE2MzYzMTUwMjl9.itUmj1tlS8OSLk325c07BUOKI7Vz8Ar2RF3OQI2dvqY","bio":null,"image":null}}
+22:57:09.912 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+22:57:09.975 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:3000/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MDI5LCJpYXQiOjE2MzYzMTUwMjl9.itUmj1tlS8OSLk325c07BUOKI7Vz8Ar2RF3OQI2dvqY
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:57:10.066 [main] DEBUG com.intuit.karate - response time in milliseconds: 91
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 3556
+1 < ETag: W/"de4-Ho8G1OWEYpUUGs4VNMFxcg"
+1 < Date: Sun, 07 Nov 2021 19:57:10 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":false,"favoritesCount":0,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:57:10.150 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/articles/cc-2b8x7f/favorite
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MDI5LCJpYXQiOjE2MzYzMTUwMjl9.itUmj1tlS8OSLk325c07BUOKI7Vz8Ar2RF3OQI2dvqY
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:57:10.189 [main] DEBUG com.intuit.karate - response time in milliseconds: 38
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 327
+1 < ETag: W/"147-815T0O8jDaYxog6zr35f+w"
+1 < Date: Sun, 07 Nov 2021 19:57:10 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"article":{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}}
+22:57:10.233 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/articles/cc-2b8x7f/favorite
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MDI5LCJpYXQiOjE2MzYzMTUwMjl9.itUmj1tlS8OSLk325c07BUOKI7Vz8Ar2RF3OQI2dvqY
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:57:10.260 [main] DEBUG com.intuit.karate - response time in milliseconds: 26
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 327
+1 < ETag: W/"147-815T0O8jDaYxog6zr35f+w"
+1 < Date: Sun, 07 Nov 2021 19:57:10 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"article":{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}}
+22:57:10.268 [main] DEBUG com.intuit.karate - request:
+2 > GET http://localhost:3000/api/articles?offset=0&limit=10
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MDI5LCJpYXQiOjE2MzYzMTUwMjl9.itUmj1tlS8OSLk325c07BUOKI7Vz8Ar2RF3OQI2dvqY
+2 > Host: localhost:3000
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+22:57:10.396 [main] DEBUG com.intuit.karate - response time in milliseconds: 128
+2 < 200
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 3555
+2 < ETag: W/"de3-CejMzQMoIu7iFfOvGZ4/CQ"
+2 < Date: Sun, 07 Nov 2021 19:57:10 GMT
+2 < Connection: keep-alive
+2 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:58:42.600 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+22:58:43.251 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:58:44.743 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:58:44.769 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+22:58:45.349 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+22:58:45.486 [main] DEBUG com.intuit.karate - response time in milliseconds: 133
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-yJ6QJQTvOCxvhiC8fQ4qoQ"
+1 < Date: Sun, 07 Nov 2021 19:58:45 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MTI1LCJpYXQiOjE2MzYzMTUxMjV9.owTJtUUevbcmu84xtcBh4zFNgEI_B6i83H8IyJ4i1hM","bio":null,"image":null}}
+22:58:45.501 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+22:58:45.564 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:3000/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MTI1LCJpYXQiOjE2MzYzMTUxMjV9.owTJtUUevbcmu84xtcBh4zFNgEI_B6i83H8IyJ4i1hM
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:58:45.648 [main] DEBUG com.intuit.karate - response time in milliseconds: 83
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 3555
+1 < ETag: W/"de3-CejMzQMoIu7iFfOvGZ4/CQ"
+1 < Date: Sun, 07 Nov 2021 19:58:45 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:58:45.674 [main] DEBUG com.intuit.karate - request:
+2 > GET http://localhost:3000/api/articles?offset=0&limit=10
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MTI1LCJpYXQiOjE2MzYzMTUxMjV9.owTJtUUevbcmu84xtcBh4zFNgEI_B6i83H8IyJ4i1hM
+2 > Host: localhost:3000
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+22:58:45.784 [main] DEBUG com.intuit.karate - response time in milliseconds: 109
+2 < 200
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 3555
+2 < ETag: W/"de3-CejMzQMoIu7iFfOvGZ4/CQ"
+2 < Date: Sun, 07 Nov 2021 19:58:45 GMT
+2 < Connection: keep-alive
+2 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:59:02.982 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+22:59:03.672 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:59:05.216 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:59:05.237 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+22:59:05.818 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"test@test.com","password":"test"}}
+
+22:59:05.947 [main] DEBUG com.intuit.karate - response time in milliseconds: 127
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 248
+1 < ETag: W/"f8-xElUkyFAuHl5v5XmklTVdA"
+1 < Date: Sun, 07 Nov 2021 19:59:05 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"user":{"username":"test","email":"test@test.com","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MTQ1LCJpYXQiOjE2MzYzMTUxNDV9.OXXcm710b7Nk0z1bTGxOdy-4V0iBDJtILaqMpoayzQU","bio":null,"image":null}}
+22:59:05.962 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+22:59:06.025 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:3000/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MTQ1LCJpYXQiOjE2MzYzMTUxNDV9.OXXcm710b7Nk0z1bTGxOdy-4V0iBDJtILaqMpoayzQU
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:59:06.120 [main] DEBUG com.intuit.karate - response time in milliseconds: 94
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 3556
+1 < ETag: W/"de4-Ho8G1OWEYpUUGs4VNMFxcg"
+1 < Date: Sun, 07 Nov 2021 19:59:06 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":false,"favoritesCount":0,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}
+22:59:06.195 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/articles/cc-2b8x7f/favorite
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MTQ1LCJpYXQiOjE2MzYzMTUxNDV9.OXXcm710b7Nk0z1bTGxOdy-4V0iBDJtILaqMpoayzQU
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:59:06.229 [main] DEBUG com.intuit.karate - response time in milliseconds: 34
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 327
+1 < ETag: W/"147-815T0O8jDaYxog6zr35f+w"
+1 < Date: Sun, 07 Nov 2021 19:59:06 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"article":{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}}
+22:59:06.270 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:3000/api/articles/cc-2b8x7f/favorite
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MTQ1LCJpYXQiOjE2MzYzMTUxNDV9.OXXcm710b7Nk0z1bTGxOdy-4V0iBDJtILaqMpoayzQU
+1 > Host: localhost:3000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:59:06.301 [main] DEBUG com.intuit.karate - response time in milliseconds: 30
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Vary: X-HTTP-Method-Override
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 327
+1 < ETag: W/"147-815T0O8jDaYxog6zr35f+w"
+1 < Date: Sun, 07 Nov 2021 19:59:06 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"article":{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}}
+22:59:06.311 [main] DEBUG com.intuit.karate - request:
+2 > GET http://localhost:3000/api/articles?offset=0&limit=10
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0IiwiZXhwIjoxNjQxNDk5MTQ1LCJpYXQiOjE2MzYzMTUxNDV9.OXXcm710b7Nk0z1bTGxOdy-4V0iBDJtILaqMpoayzQU
+2 > Host: localhost:3000
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+22:59:06.433 [main] DEBUG com.intuit.karate - response time in milliseconds: 121
+2 < 200
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 3555
+2 < ETag: W/"de3-CejMzQMoIu7iFfOvGZ4/CQ"
+2 < Date: Sun, 07 Nov 2021 19:59:06 GMT
+2 < Connection: keep-alive
+2 < Keep-Alive: timeout=5
+{"articles":[{"slug":"cc-2b8x7f","title":"cc","description":"cc","body":"cc","createdAt":"2021-11-07T19:36:31.936Z","updatedAt":"2021-11-07T19:36:31.936Z","tagList":[],"favorited":true,"favoritesCount":1,"author":{"username":"ss","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"perriane-frey-5sp4l7","title":"Perriane Frey","description":"Lorath","body":"Stackhouse","createdAt":"2021-11-07T11:36:10.516Z","updatedAt":"2021-11-07T11:36:10.516Z","tagList":["Article13"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"merrit-4jz0lo","title":"Merrit","description":"Tolos","body":"Wells","createdAt":"2021-11-07T11:35:10.242Z","updatedAt":"2021-11-07T11:35:10.242Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"melessa-florent-cz7864","title":"Melessa Florent","description":"Tyria","body":"Manning","createdAt":"2021-11-07T11:34:19.579Z","updatedAt":"2021-11-07T11:34:19.579Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"hayhead-gw4vx0","title":"Hayhead","description":"Tyrosh","body":"Paege","createdAt":"2021-11-07T11:33:45.430Z","updatedAt":"2021-11-07T11:33:45.430Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-wdiqik","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:24:15.968Z","updatedAt":"2021-11-07T10:24:15.968Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article13-ts4x7i","title":"Article13","description":"Article13","body":"Article13","createdAt":"2021-11-07T10:23:06.686Z","updatedAt":"2021-11-07T10:23:06.686Z","tagList":["Article13"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-jgn93r","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-07T10:22:41.916Z","updatedAt":"2021-11-07T10:22:41.916Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-143bx9","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:52:20.249Z","updatedAt":"2021-11-04T17:52:20.249Z","tagList":["Article12"],"favorited":false,"favoritesCount":0,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}},{"slug":"article12-vcjl0","title":"Article12","description":"Article12","body":"Article12","createdAt":"2021-11-04T17:48:29.089Z","updatedAt":"2021-11-04T17:48:29.089Z","tagList":["Article12"],"favorited":true,"favoritesCount":1,"author":{"username":"test","bio":null,"image":"https://static.productionready.io/images/smiley-cyrus.jpg","following":false}}],"articlesCount":25}

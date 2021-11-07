@@ -48,7 +48,7 @@ Feature: HomeWork
     Then status 200
     And match response.articles[*].slug contains articleSlug
 
-  @debug
+
   Scenario: Commnet article
     Given path 'articles'
     Given params { limit: 10, offset: 0 }
