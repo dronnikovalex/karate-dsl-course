@@ -48,7 +48,6 @@ Feature: Tests for the home page
           }
       },
     """
-  @debug
   Scenario: Conditional logic
     Given path 'articles'
     Given params { limit: 10, offset: 0 }

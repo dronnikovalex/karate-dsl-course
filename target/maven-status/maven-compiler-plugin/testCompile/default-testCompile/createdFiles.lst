@@ -1,2 +1,3 @@
-ConduitApp\ConduitTest.class
 helpers\DataGenerator.class
+helpers\DbHandler.class
+ConduitApp\ConduitTest.class
